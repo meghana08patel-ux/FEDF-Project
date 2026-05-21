@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CIBIL Score Calculator</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>CIBIL Score Calculator</h1>
+
+        <form id="cibilForm">
+
+            <!-- Monthly Income -->
+            <div class="input-group">
+                <label>Monthly Income (₹)</label>
+
+                <input
+                    type="number"
+                    id="income"
+                    min="0"
+                    step="1"
+                    placeholder="Enter monthly income"
+                    required>
+            </div>
+
+            <!-- EMI Details -->
+            <div class="input-group">
+                <label>Total EMIs Paid</label>
+
+                <input
+                    type="number"
+                    id="totalEmi"
+                    min="1"
+                    step="1"
+                    placeholder="Enter total EMIs"
+                    required>
+            </div>
+
+            <div class="input-group">
+                <label>Late EMI Payments</label>
+
+                <input
+                    type="number"
+                    id="latePayments"
+                    min="0"
+                    step="1"
+                    placeholder="Enter late payments"
+                    required>
+            </div>
+
+            <!-- Credit Limit -->
+            <div class="input-group">
+                <label>Total Credit Limit (₹)</label>
+
+                <input
+                    type="number"
+                    id="creditLimit"
+                    min="1"
+                    step="1"
+                    placeholder="Enter total credit limit"
+                    required>
+            </div>
+
+            <!-- Used Credit -->
+            <div class="input-group">
+                <label>Used Credit Amount (₹)</label>
+
+                <input
+                    type="number"
+                    id="usedCredit"
+                    min="0"
+                    step="1"
+                    placeholder="Enter used credit amount"
+                    required>
+            </div>
+
+            <!-- Active Loans -->
+            <div class="input-group">
+                <label>Number of Active Loans</label>
+
+                <input
+                    type="number"
+                    id="loans"
+                    min="0"
+                    step="1"
+                    placeholder="Enter active loans"
+                    required>
+            </div>
+
+            <button type="button" onclick="calculateScore()">
+                Calculate Score
+            </button>
+
+        </form>
+
+        <!-- Result -->
+        <div class="result" id="resultBox">
+
+            <h2>Your Estimated CIBIL Score</h2>
+
+            <div class="score" id="score"></div>
+
+            <div class="status" id="status"></div>
+
+            <div class="reason-box">
+
+                <h3>Factors Affecting Your Score</h3>
+
+                <ul id="reasonsList"></ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+ 
+
+</body>
+
+</html>
