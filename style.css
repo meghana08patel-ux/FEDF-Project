@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body {
+    background-color: #f5f1ea;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    width: 430px;
+    background-color: #ffffff;
+    padding: 35px;
+    border-radius: 18px;
+    border: 1px solid #e8dfd3;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.container h1 {
+    text-align: center;
+    color: #5c4b3b;
+    margin-bottom: 28px;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #6b5b4d;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+input {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #d8cfc4;
+    border-radius: 10px;
+    background-color: #faf8f5;
+    font-size: 15px;
+    color: #333;
+    transition: 0.3s;
+}
+
+/* Remove number arrows */
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+input:focus {
+    outline: none;
+    border-color: #bfa58a;
+    background-color: #ffffff;
+}
+
+button {
+    width: 100%;
+    padding: 13px;
+    background-color: #c7ad93;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #b59679;
+}
+
+.result {
+    margin-top: 25px;
+    padding: 22px;
+    border-radius: 14px;
+    background-color: #faf8f5;
+    border: 1px solid #e5dbcf;
+    text-align: center;
+    display: none;
+}
+
+.result h2 {
+    color: #5c4b3b;
+    margin-bottom: 10px;
+}
+
+.score {
+    font-size: 48px;
+    font-weight: bold;
+    color: #9c7b5e;
+    margin-bottom: 10px;
+}
+
+.status {
+    font-size: 20px;
+    font-weight: 600;
+    color: #6b5b4d;
+    margin-bottom: 20px;
+}
+
+.reason-box {
+    text-align: left;
+}
+
+.reason-box h3 {
+    color: #5c4b3b;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.reason-box ul {
+    padding-left: 20px;
+}
+
+.reason-box li {
+    margin-bottom: 8px;
+    color: #555;
+    line-height: 1.5;
+}
