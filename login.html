@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - CIBIL Score Calculator</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Welcome</h1>
+        <!--
+CO5: Form Engineering & Validation
+Concept: Controlled User Input Collection
+Collects user details before accessing the calculator.
+-->
+<form id="loginForm">
+
+        <form id="loginForm">
+
+            <div class="input-group">
+
+                <label>Full Name</label>
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Enter your name"
+                    required>
+
+            </div>
+
+            <div class="input-group">
+
+                <label>Contact Number</label>
+
+                <input
+                    type="tel"
+                    id="contact"
+                    placeholder="Enter your contact number"
+                    pattern="[0-9]{10}"
+                    maxlength="10"
+                    required>
+
+            </div>
+
+            <button type="submit">
+                Continue
+            </button>
+
+        </form>
+
+    </div>
+
+    <script>
+
+        document.getElementById("loginForm")
+        .addEventListener("submit", function(e) {
+
+            e.preventDefault();
+
+            const name =
+                document.getElementById("name").value;
+
+            const contact =
+                document.getElementById("contact").value;
+                /*
+CO4: State Architecture
+Concept: Global State Persistence using localStorage
+Stores user information across pages.
+*/
+
+localStorage.setItem("userName", name);
+localStorage.setItem("userContact", contact);
+
+            localStorage.setItem(
+                "userName",
+                name
+            );
+
+            localStorage.setItem(
+                "userContact",
+                contact
+            );
+
+            window.location.href =
+                "index.html";
+        });
+
+    </script>
+
+</body>
+
+</html>
